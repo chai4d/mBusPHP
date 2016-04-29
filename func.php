@@ -1,20 +1,7 @@
 <?php
 include_once "global.php";
 $act = req("act");
-if ($act == "resetBusPath")
-{
-	$map = new myBusPath;
-	$map->resetBusPath();
-}
-else if ($act == "insertBusPath")
-{
-	$sourceId = req("sourceId");
-	$destinationId = req("destinationId");
-	$busPath = req("busPath");
-	$map = new myBusPath;
-	$map->insertBusPath($sourceId, $destinationId, $busPath);
-}
-else if ($act == "getBusPaths")
+if ($act == "getBusPaths")
 {
 	$sourceId = req("sourceId");
 	$destinationId = req("destinationId");
