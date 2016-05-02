@@ -1,8 +1,8 @@
 <?php
 $DB_HOST = "localhost";
 $DB_NAME = "m_bus";
-$DB_USER = "root";
-$DB_PASS = "Y2hhaS00ZA==";
+$DB_USER = "chai"; //mbusinth_mbus
+$DB_PASS = "Q2hhaS00REBXaXJvai5QOQ==";
 
 class mydb
 {
