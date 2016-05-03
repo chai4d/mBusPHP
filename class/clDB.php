@@ -1,7 +1,7 @@
 <?php
 $DB_HOST = "localhost";
-$DB_NAME = "m_bus";
-$DB_USER = "chai"; //mbusinth_mbus
+$DB_NAME = "mbusinth_mbus";
+$DB_USER = "mbusinth_mbus";
 $DB_PASS = "Q2hhaS00REBXaXJvai5QOQ==";
 
 class mydb
