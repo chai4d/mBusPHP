@@ -5,20 +5,16 @@ class myBusPath
   {
   	$sql = "select cast(uncompress(bus_path) as char) as bus_path ";
   	$sql .= "from bus_path ";
-  	$sql .= "where source_id = ? ";
-  	$sql .= " and destination_id = ? ";
+  	$sql .= "where source_id = $sourceId ";
+  	$sql .= " and destination_id = $destinationId ";
   	
   	$db = new mydb;
   	$db->connect();
-  	$stmt = $db->prepare($sql);
-  	$stmt->bind_param("ss", $sourceId, $destinationId);
-  	$stmt->execute();
-  	$result = $stmt->get_result();
-  	if ($row = $result->fetch_assoc())
+	$db->query($sql);
+	if ($row = $db->fetch_row())
   	{
   		echo $row["bus_path"];
   	}
-	$stmt->free_result();
 	$db->close();
   }
 
